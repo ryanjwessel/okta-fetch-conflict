@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "okta-fetch-test",
+    "slug": "okta-fetch-test",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "okta-fetch-test"
+}

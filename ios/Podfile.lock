@@ -30,6 +30,15 @@ PODS:
     - React-jsi (= 0.64.3)
     - ReactCommon/turbomodule/core (= 0.64.3)
   - glog (0.3.5)
+  - OktaOidc (3.11.0):
+    - OktaOidc/AppAuth (= 3.11.0)
+    - OktaOidc/Okta (= 3.11.0)
+  - OktaOidc/AppAuth (3.11.0)
+  - OktaOidc/Okta (3.11.0):
+    - OktaOidc/AppAuth
+  - OktaSdkBridgeReactNative (2.4.0):
+    - OktaOidc (= 3.11.0)
+    - React
   - RCT-Folly (2020.01.13.00):
     - boost-for-react-native
     - DoubleConversion
@@ -287,6 +296,8 @@ PODS:
     - React-cxxreact (= 0.64.3)
     - React-jsi (= 0.64.3)
     - React-perflogger (= 0.64.3)
+  - RNDeviceInfo (8.7.0):
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -303,6 +314,7 @@ DEPENDENCIES:
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - "OktaSdkBridgeReactNative (from `../node_modules/@okta/okta-react-native`)"
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
@@ -328,11 +340,13 @@ DEPENDENCIES:
   - React-RCTVibration (from `../node_modules/react-native/Libraries/Vibration`)
   - React-runtimeexecutor (from `../node_modules/react-native/ReactCommon/runtimeexecutor`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
   trunk:
     - boost-for-react-native
+    - OktaOidc
 
 EXTERNAL SOURCES:
   DoubleConversion:
@@ -361,6 +375,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/React/FBReactNativeSpec"
   glog:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
+  OktaSdkBridgeReactNative:
+    :path: "../node_modules/@okta/okta-react-native"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -407,6 +423,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/runtimeexecutor"
   ReactCommon:
     :path: "../node_modules/react-native/ReactCommon"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -425,6 +443,8 @@ SPEC CHECKSUMS:
   FBLazyVector: c71c5917ec0ad2de41d5d06a5855f6d5eda06971
   FBReactNativeSpec: 51e9b0004f4345f320c3cb861d31be20b9618205
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
+  OktaOidc: 7a6a9a827722b26fded69c9715e606f5abc3a3a7
+  OktaSdkBridgeReactNative: 98ec66fe5bcbc640279985c382580d039791269f
   RCT-Folly: ec7a233ccc97cc556cf7237f0db1ff65b986f27c
   RCTRequired: d34bf57e17cb6e3b2681f4809b13843c021feb6c
   RCTTypeSafety: 8dab4933124ed39bb0c1d88d74d61b1eb950f28f
@@ -448,6 +468,7 @@ SPEC CHECKSUMS:
   React-RCTVibration: c7f845861e79eae13dc1e8217a3cf47a3945b504
   React-runtimeexecutor: 493d9abb8b23c3f84e19ae221eeba92cadcb70dc
   ReactCommon: 8fea6422328e2fc093e25c9fac67adbcf0f04fb4
+  RNDeviceInfo: 36286df381fcaf1933ff9d2d3c34ba2abeb2d8d8
   Yoga: e6ecf3fa25af9d4c87e94ad7d5d292eedef49749
 
 PODFILE CHECKSUM: 5995b27773bcd3773c66d52a6bf3797d3c02140f

@@ -16,7 +16,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
-    "react-native-device-info": "^8.7.0"
+    "react-native-device-info": "^8.7.0",
+    "react-query": "^3.35.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

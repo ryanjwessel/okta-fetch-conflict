@@ -1,31 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
-import {
-    createConfig,
-} from "@okta/okta-react-native";
 
 export default function App() {
     const [data, setData] = useState(null);
     const [oktaReady, setOktaReady] = useState(false);
-
-    useEffect(() => {
-        const oktaInit = async () => {
-            try {
-                const oktaReady = await createConfig({
-                    clientId: "mockClientId",
-                    redirectUri: `https://fakeauth.com:/login`,
-                    endSessionRedirectUri: `https://fakeauth.com:/logout`,
-                    discoveryUri:
-                        "https://mock-123.okta.com/oauth2/default",
-                    scopes: ["openid", "profile"],
-                });
-                setOktaReady(oktaReady);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        oktaInit();
-    }, []);
 
     useEffect(() => {
         fetchMockData();
